@@ -9,7 +9,7 @@
 
 <style type="text/css">
 <!--
-@import url(stylesheets/style.css);
+@import url(/style.css);
 .style3 {font-size: 18px; color: #2996D6; font-weight: bold; }
 -->
 </style>
