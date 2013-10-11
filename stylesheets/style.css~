@@ -3,7 +3,7 @@ body{
 	padding:0px;
 	margin-top:0px;
 	background-color:#E0EDF5;
-	background: #E0EDF5 url(../images/bg.png) repeat-x top;
+	background: #E0EDF5 url(images/bg.png) repeat-x top;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 }
 #wrapper{
@@ -13,7 +13,7 @@ body{
 	background-color:#FFFFFF;
 }
 #header{
-	background: #E0EDF5 url(../images/header.jpg) no-repeat top center;
+	background: #E0EDF5 url(images/header.jpg) no-repeat top center;
 	float:left;
 	width:800px;
 	height:124px;
@@ -21,7 +21,7 @@ body{
 	padding:0px;
 }
 #leftbar{
-	background: url(../images/border-left.png) repeat-y left top;
+	background: url(images/border-left.png) repeat-y left top;
 	width:800px;
 	float:left;
 	margin:0px;
@@ -34,7 +34,7 @@ body{
 }
 #rightbar{
 	width:800px;
-	background:url(../images/border-right.png) repeat-y right top;
+	background:url(images/border-right.png) repeat-y right top;
 	float:right;
 	margin:0px;
 }
@@ -74,7 +74,7 @@ body{
 	text-align:center;
 	text-decoration:none;
 	color:#6C7475;
-	background: url(../images/nav-bg.gif) repeat-x;
+	background: url(images/nav-bg.gif) repeat-x;
 	background-color:#7ABEE5;
 	border-right:1px solid #505050;
 	border-left:1px solid white;
@@ -104,7 +104,7 @@ body{
 /*end header*/
 /*index content*/
 #bigimage{
-	background: url(../images/bigimage.jpg) no-repeat left center;
+	background: url(images/bigimage.jpg) no-repeat left center;
 	float:left;
 	width:506px;
 	height:288px;
@@ -135,28 +135,28 @@ body{
 #main{
 	float:right;
 	width:760px;
-	background:url(../images/main-bg.gif) repeat-y;
+	background:url(images/main-bg.gif) repeat-y;
 }
 #main #left{
 	padding:10px;
 	padding-top:142px;
 	float:left;
 	width:232px;
-	background: #E0EDF5 url(../images/whyimage.jpg) no-repeat left top;
+	background: #E0EDF5 url(images/whyimage.jpg) no-repeat left top;
 }
 #main #middle{
 	padding:10px;
 	padding-top:142px;
 	margin-left:254px;
 	margin-right:254px;
-	background: #E0EDF5 url(../images/whatimage.jpg) no-repeat left top;
+	background: #E0EDF5 url(images/whatimage.jpg) no-repeat left top;
 }
 #main #right{
 	padding:10px;
 	padding-top:142px;
 	float:right;
 	width:232px;
-	background: #E0EDF5 url(../images/helpimage.jpg) no-repeat left top;
+	background: #E0EDF5 url(images/helpimage.jpg) no-repeat left top;
 }
 /*end index content*/
 /*right bar content*/
@@ -230,7 +230,7 @@ input.checkbox{
 	float:right;
 	margin-left:0px;
 	margin-right:0px;
-	background:#E0E0E0 url(../images/signup-bg.png) no-repeat top center;
+	background:#E0E0E0 url(images/signup-bg.png) no-repeat top center;
 	color:#484848;
 	width:191px;
 	height:182px;
@@ -272,7 +272,7 @@ input.checkbox{
 #doublepage_bottom_conatiner{
 	float:left;
 	width:760px;
-	background:url(../images/doublepage-bg.gif) repeat-y right;
+	background:url(images/doublepage-bg.gif) repeat-y right;
 }
 #heading_image{
 	margin-top:5px;
@@ -385,7 +385,7 @@ h3{
 	font-size:8pt;
 	color:#707070;
 	padding-top:10px;
-	background: #E0EDF5 url(../images/footer.png) no-repeat left top;
+	background: #E0EDF5 url(images/footer.png) no-repeat left top;
 	width:800px;
 	height:50px;
 }
