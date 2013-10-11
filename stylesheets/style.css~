@@ -291,7 +291,7 @@ input.checkbox{
 	line-height: 16px;
 	background-attachment: scroll;
 	background-color: #FFFFFF;
-	background-image: url(/images/babyBack.jpg);
+	background-image: url(../images/babyBack.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 }
