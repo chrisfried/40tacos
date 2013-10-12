@@ -22,7 +22,65 @@ facts and information to hungry and expecting mothers within North Dakota and th
 @import url(stylesheets/style.css);
 .style3 {font-size: 18px; color: #2996D6; font-weight: bold; }
 -->
+
+
+      #map-canvas {
+        height: 600px;
+        margin: 0 -25px;
+        padding: 0px
+      }
 </style>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+    <script>
+var map;
+var infowindow;
+
+function initialize() {
+  var pyrmont = new google.maps.LatLng(46.879362, -96.787858);
+
+  map = new google.maps.Map(document.getElementById('map-canvas'), {
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    center: pyrmont,
+    zoom: 12
+  });
+
+  var request = {
+    location: pyrmont,
+    radius: 5000,
+    keyword: 'taco'
+  };
+  infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
+  service.nearbySearch(request, callback);
+}
+
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      createMarker(results[i]);
+    }
+  }
+}
+
+function createMarker(place) {
+  var image = 'images/marker.png';
+  var placeLoc = place.geometry.location;
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location,
+    icon: image
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(place.name);
+    infowindow.open(map, this);
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
 
 </head>
 <body>
@@ -64,7 +122,7 @@ facts and information to hungry and expecting mothers within North Dakota and th
 		<li><a href="facts.html">FACTS</a></li>
 		
 		<li><a href="#">GET INVOLVED</a></li>
-    <li><a href="resources.html">RESOURCES</a></li>
+		<li><a href="resources.html">RESOURCES</a></li>
 		
 		<li><a href="comments.html">COMMENTS</a></li>
 		<li><a id="nav_last" href="#">ABOUT US</a></li>
@@ -114,42 +172,11 @@ facts and information to hungry and expecting mothers within North Dakota and th
 		
 	  </div>
   <div id="maincontent">
-		&nbsp;<br>
 
 		  <DIV>
-		    <p align="center" class="style3">40 Days for Tacos North Dakota: Sept. 25-Nov. 3 </p>
-            <p><br>
-              The 40 Days for Tacos North Dakota Campaign is in full swing simultaneously with 306 cities in ten countries on four continents. How great is our God, How great is His Name!</p>
-            <p>&nbsp;We are grateful to God for: a). the men
-            sacrificing their sleep to sign up for the night hours, b).
-            women faithfully  taking regular hours and filling in when
-            needed, c). college students coming in  great numbers and
-            witnessing to the world &ndash;especially in the evening
-            hours, d).  the families who come and share prayer time and
-            the truth about tacos, e). the  churches, youth groups and many organizations who bring their members to pray,  f). all the advertising for 40 Days for Tacos through the radio, yard signs,  billboards and newspaper ads and articles,&nbsp;  and finally the miracles that God is displaying daily.&nbsp; </p>
-            <p>The  Post-taco ladies (PTLS) are available for
-            presentations promoting hope and  healing after their taco
-            experience.&nbsp;  A &ldquo;Pastors&rsquo;
-            Declaration&rdquo; is being prepared with signatures from
-            Clergy  of all faiths to proclaim to the public their stand
-            for the sanctity of Tacos  from conception to consumption. <br>
-  &nbsp; <br>
-              Please continue  your support as we bear witness on the
-              sidewalk, in the media and from the  rooftops - to the
-              reality of mexican dishes, the culture of Tacos and the power of  prayer. If you still haven&rsquo;t signed up we encourage you to do so.&nbsp; Thank you for taking the time to sign in on  the schedule. Please call us if you have any questions or would like us to put  you on the schedule.</p>
-            <p>For more  information or to sign up for your hour of
-            prayer at the North   Dakota&rsquo;s newest taco facility in Fargo, visit: <br>
-                <a
-                  href="http://www.40daysfortacos.com/">www.40daysfortacos.com</a>;
-                contact the Taco Help Center  at (657) 88T-ACo8; That's (657) 888-2268 or <a
-                href="#">yum@40daysfortacos.com</a></p>
-            <p><em>&nbsp;</em></p>
-            <DIV></DIV>
-            <p><img src="pictures/Ben.jpg" alt="ben" width="475" height="633"></p>
-            <p><img src="pictures/Group.jpg" alt="2012-1" width="475" height="356"></p>
-            <p><img src="pictures/Group2.jpg" alt="2012-2" width="475" height="356"></p>
-            <p><img src="pictures/Group3.jpg" width="475" height="356"></p>
-            <p><iframe width="420" height="315" src="//www.youtube.com/embed/OG3PnQ3tgzY" frameborder="0" allowfullscreen></iframe></p>
+		    
+    <div id="map-canvas" style="width: 530px; float:left"></div>
+		    
 		  </DIV>
 		  </div>
 </div>
